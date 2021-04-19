@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Taller 1</title>
+</head>
+
+<body>
+    <main class="container-fluid fondo d-flex justify-content-center align-items-center min-vh-100 ">
+        <div>
+            <div class="container">
+                <div class="card" id="formulario">
+                    <div class="card">
+                        <input type="text" name="nombre" size="20" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="card">
+                        <input type="text" name="comentario" size="2" placeholder="Ingrese su nombre">
+                    </div>
+
+                    <button type="button" onclick="addAlerts()" class="btn btn-primary">Ingresar</button>
+                </div>
+            </div>
+        </div>
+        <div class=" row mt-2 alert">
+            <div id="alerts"></div>
+        </div>
+    </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>
