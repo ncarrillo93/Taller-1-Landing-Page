@@ -16,30 +16,195 @@
     <title>Taller 1</title>
 </head>
 
-<body>
-    <div data-video="uwmeH6Rnj2E" data-autoplay="1" data-loop="0" id="youtube-audio">
-    </div>
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+<body id="page-top">
+    <main class="container-fluid fondo  ">
 
-    <main class="container-fluid fondo d-flex justify-content-center align-items-center min-vh-100 ">
-        <div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <div class="card" id="formulario">
-                    <div class="card">
-                        <input type="text" name="nombre" size="20" placeholder="Ingrese su nombre">
-                    </div>
-                    <div class="card">
-                        <input type="text" name="comentario" size="2" placeholder="Ingrese su nombre">
-                    </div>
-
-                    <button type="button" onclick="addAlerts()" class="btn btn-primary">Ingresar</button>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contacto">contacto</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#comentarios">Comentarios</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Impresiones 3D</h1>
+                    <a class="btn btn-primary js-scroll-trigger" href="#productos">Productos</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="about-section text-center bg-dark" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Nosotros</h2>
+                        <p class="text-white-50">
+                            Esta es una pagina creada en base a bootstrap 4 para un proyecto de Tecnologia y servicios
+                            de internet.
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid mx-auto" src="images/design.png" alt="" />
+            </div>
+        </section>
+
+        <!-- Productos-->
+        <section class="productos-section bg-light" id="productos">
+            <div class="container">
+                <!-- Project One Row-->
+                <h1 class="text-Black mb-4 justify-content-center align-items-center ">Productos</h1>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="images/swolepokemon.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-white text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h3 class="text-black"> Swole Pokemon</h3>
+                                    <p class="mb-0 text-black-50"> Diseños exoticos de clasicos pokemon</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="images/Among-Us.jpg" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-white text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h3 class="text-black">Among Us</h3>
+                                    <p class="mb-0 text-black-50">Figuras del juego indie mas exitoso del ultimo tiempo
+                                    </p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-dark" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase text-white-50">Nuestro Team</h2>
+                    <h3 class="section-subheading text-muted text-white-50">El equipo que desarrollo este proyecto.</h3>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle d-block " src="images/team/2.jpg" alt="responsive" />
+                            <h4 class="text-white-50">Nicolás Carrillo Sepúlveda</h4>
+                            <p class="text-muted text-white-50">Estudiante de Ingenieria Civil Telematica</p>
+
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/n.carrillo93/"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn btn-dark btn-social mx-2"
+                                href="https://www.linkedin.com/in/nicol%C3%A1s-carrillo-sep%C3%BAlveda-95491a85/"><i
+                                    class="fab fa-linkedin-in"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="contacto">
+            <div class="container-fluid d-flex">
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Dirección</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50"><a
+                                        href="https://www.google.cl/maps/place/North+Sydney+Orthodontics/@-33.8331047,151.2044147,261m/data=!3m1!1e3!4m8!1m2!2m1!1sp+sherman+wallaby+42+sidney!3m4!1s0x6b12aeec0e282edf:0xa69140e2e009c4!8m2!3d-33.832923!4d151.205166">P.
+                                        Sherman, calle Wallaby, 42, Sydney</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0"> <a href="mailto:n.carrillo01@ufromail.cl"></a>
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50"><a
+                                        href="mailto:n.carrillo01@ufromail.cl">n.carrillo01@ufromail.cl</a></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-4 mb-3 mb-md-0">
+                        <div class="py-4 h-100">
+                            <div class="card card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">+56 9 1234 5678</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        <section id="comentarios" class="page-section">
+            <div>
+                <div class="container">
+                    <div class="card" id="formulario">
+                        <div class="card">
+                            <input type="text" name="nombre" size="20" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="card">
+                            <input type="text" name="comentario" size="2" placeholder="Ingrese su nombre">
+                        </div>
+
+                        <button type="button" onclick="addAlerts()" class="btn btn-primary">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" row mt-2 alert">
+                <div id="alerts"></div>
+            </div>
+        </section>
+
+
+        <!-- 
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <div data-video="uwmeH6Rnj2E" data-autoplay="1" data-loop="0" id="youtube-audio">
         </div>
-        <div class=" row mt-2 alert">
-            <div id="alerts"></div>
-        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+        
+
+        -->
+
     </main>
 </body>
 <script src="js/main.js"></script>

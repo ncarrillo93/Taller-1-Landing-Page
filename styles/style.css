@@ -1,5 +1,6 @@
 html {
     font-size: 100%;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     color:white;
   }
@@ -19,5 +20,7 @@ html {
   }
   .card{
     background-color: white;
-    margin: 2rem;
+    margin: 1rem;
+    box-shadow: 3px;
+
   }
