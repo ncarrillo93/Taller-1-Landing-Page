@@ -5,7 +5,10 @@ html {
   color:black;
 }
 .navbar{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../images/bg-masthead.jpg");
+  color: white;
+  background-color: grey;
+  filter: alpha(opacity=90);
+  opacity: 1;
 }
 .fondo{
     background-repeat: no-repeat;
@@ -39,24 +42,37 @@ html {
   background-image: url('https://media.giphy.com/media/pHZbAm4hxiR8XeIaOA/giphy.gif');
 }
 
-
-.contact-section{
-  border-radius: 2cm;
-  background-color: white;    
+.contactos{
+  background-color:#000000;
+  gap: 20px;
 }
+.card-contacts{
+  border-radius: 10px;
+  background-color: white; 
+  width: 30%:
+}
+
 .productos-section{
   background-color: white;
 }
+
 .name{
   text-transform: uppercase;
 }
 .comments{
   text-align: start;
-
+}
+.comments-box{
+  border-radius: 10px;
+  gap: 20px;
 }
 .comments-card{
   box-shadow: 2px;
   border-radius: 3px;
   background-color: grey;
   width: 20%;
+}
+.comentarios{
+  background-color: grey;
+  gap: 20px;
 }

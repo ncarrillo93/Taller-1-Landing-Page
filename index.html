@@ -181,12 +181,10 @@
                 </div>
             </div>
         </section>
-
-        <section class="" id="contacto">
-            <div class="container-fluid d-flex justify-content-around">
-                <div class="row">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
+        <section class="contactos" id="contacto">
+                <div class="row d-flex justify-content-center contactos">
+                    <div class="col-md-4 card-contacts">
+                        <div class=" py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Dirección</h4>
@@ -197,8 +195,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0"> <a href="mailto:n.carrillo01@ufromail.cl"></a>
-                        <div class="card py-4 h-100">
+                    <div class="col-md-4 card-contacts"> <a href="mailto:n.carrillo01@ufromail.cl"></a>
+                        <div class=" py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
@@ -209,9 +207,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="col-md-4 card-contacts ">
                         <div class="py-4 h-100">
-                            <div class="card card-body text-center">
+                            <div class=" card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Phone</h4>
                                 <hr class="my-4" />
@@ -220,28 +218,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
         </section>
 
         <!------------------------------------------------- COMENTARIOS   ------------------------------------------->
 
-        <section id="comentarios" class="page-section">
+        <section class="comentarios" id="comentarios" class="page-section">
+            <h1 class="text-Black mb-4 justify-content-center align-items-center ">Comentarios</h1>
             <div>
                 <div class="container">
-                    <div class="card" id="formulario">
+                    <div class="comments-box" id="formulario">
                         <div class="card">
-                            <input type="text" id="nombre" minlength="3" placeholder="Ingrese su nombre">
+                            <input type="text" id="nombre" minlength="3" maxlength="15"  oninput="contar()" placeholder="Ingrese su nombre">
                         </div>
+                        <p id="num_name" style="color:white"></p>
                         <div class="card">
-                            <input type="text" id="comentario" minlength="1" maxlength="200"
+                            <input type="text" id="comentario" minlength="1" maxlength="200"  oninput="contar()"
                                 placeholder="Ingrese su comentario">
-                        </div>                        
+                        </div>
+                        <p id="num_com" style="color:white"></p>
                         <button type="button" onclick="addAlerts()" class="btn btn-primary">Ingresar</button>
                     </div>
                 </div>
+
                 <div class="alerts d-flex " id="alerts"></div>
-            <script src="js/main.js"></script>
+                <script src="js/main.js"></script>
         </section>
     </main>
 </body>

@@ -2,14 +2,33 @@
 const arrayAlerts = ["success"];
 const alerts = document.getElementById("alerts");
 //let comments = [document.getElementById("nombre").value,document.getElementById("comentario").value,document.getElementById("fecha").value ];
+contar();
 function drawAlerts(){
   var name = document.getElementById("nombre").value;
   var com  = document.getElementById("comentario").value;
   var f = new Date();
-    var date = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
+  var date = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
   let comments = [name,com,date];
-
-  alerts.innerHTML = arrayAlerts.map((alert,index)=>alerta(comments,alert,index) ).join('');
+  contar();
+  if(name.length<3){
+    if(com==""){
+      alert("debes ingresar un nombre y un comentario ")
+      clean();
+    }else{
+      alert("debes ingresar un nombre de minimo 3 caracteres");
+      clean();
+    }
+  }else{
+    if(com==""){
+      alert("debes ingresar un comentario ")
+      clean();
+    }else{
+      alerts.innerHTML = arrayAlerts.map((alert,index)=>alerta(comments,alert,index) ).join('');
+      clean();
+    }
+    clean();
+  }
+  clean();
 }
 
 function alerta(comments,alert,index){
@@ -25,6 +44,8 @@ function alerta(comments,alert,index){
     </div>
 </div>`;
 }
+
+
 const addAlerts = (type) => {
     arrayAlerts.push(type);
     drawAlerts();
@@ -32,4 +53,18 @@ const addAlerts = (type) => {
 function deleteAlert(index){
     arrayAlerts.splice(index, 1);
     drawAlerts();
+}
+
+function clean(){
+  var name = document.getElementById("nombre").value;
+  var com  = document.getElementById("comentario").value;
+  nombre.innerHTML = "";
+  comentario.innerHTML = "";
+}
+
+function contar(){
+  var name = document.getElementById("nombre").value;
+  var com  = document.getElementById("comentario").value;
+  num_name.innerHTML = name.length+'/15';
+  num_com.innerHTML = com.length+'/200';
 }
