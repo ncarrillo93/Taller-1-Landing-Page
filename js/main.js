@@ -2,14 +2,12 @@
 const arrayAlerts = ["success"];
 const alerts = document.getElementById("alerts");
 //let comments = [document.getElementById("nombre").value,document.getElementById("comentario").value,document.getElementById("fecha").value ];
-contar();
 function drawAlerts(){
   var name = document.getElementById("nombre").value;
   var com  = document.getElementById("comentario").value;
   var f = new Date();
   var date = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
   let comments = [name,com,date];
-  contar();
   if(name.length<3){
     if(com==""){
       alert("debes ingresar un nombre y un comentario ")
