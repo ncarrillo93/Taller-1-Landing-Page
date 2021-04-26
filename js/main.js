@@ -2,27 +2,31 @@
 const arrayAlerts = [];
 const alerts = document.getElementById("alerts");
 //let comments = [document.getElementById("nombre").value,document.getElementById("comentario").value,document.getElementById("fecha").value ];
-function drawAlerts(){
+
+
+
+function drawAlerts() {
   var name = document.getElementById("nombre").value;
-  var com  = document.getElementById("comentario").value;
+  var com = document.getElementById("comentario").value;
   var f = new Date();
-  var date = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
-  let comments = [name,com,date];
-  if(name.length<3){
-    if(com==""){
+  var date = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+  let comments = [name, com, date];
+  if (name.length < 3) {
+    if (com == "") {
       alert("debes ingresar un nombre y un comentario ")
       clean();
-    }else{
+    } else {
       alert("debes ingresar un nombre de minimo 3 caracteres");
       clean();
     }
-  }else{
-    if(com==""){
+  } else {
+    if (com == "") {
       alert("debes ingresar un comentario ")
       clean();
-    }else{
-      
-      alerts.innerHTML = arrayAlerts.map((alert,index)=>alerta(comments,alert,index) ).join('');
+    } else {
+
+      alerts.innerHTML = arrayAlerts.map((alert, index) => alerta( alert, index)).join('');
+
       clean();
     }
     clean();
@@ -30,7 +34,7 @@ function drawAlerts(){
   clean();
 }
 
-function alerta(comments,alert,index){
+function alerta(comments, index) {
   return `<div class="container col comments-card" onclick="deleteAlert(${index})"></a>
     <div class="card py-4 h-100">
         <div class="card-body text-center">
@@ -45,34 +49,41 @@ function alerta(comments,alert,index){
 }
 
 
-const addAlerts = (comments) => {
-    if(arrayAlerts.length <=3){
-      console.log("menor a 4");
-      arrayAlerts.push(comments);  
-      drawAlerts();
-    }
-    else{
-      console.log(arrayAlerts.length);
-      arrayAlerts.pop();
-      arrayAlerts.push(comments);
-      drawAlerts();
-    }
-}
-function deleteAlert(index){
-    arrayAlerts.splice(index, 1);
+const addAlerts = () => {
+  var name = document.getElementById("nombre").value;
+  var com = document.getElementById("comentario").value;
+  var f = new Date();
+  var date = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+  let comments = [name, com, date];
+
+  if (arrayAlerts.length <= 3) {
+    console.log("menor a 4");
+    arrayAlerts.push(comments);
+    console.log(arrayAlerts);
     drawAlerts();
+  }
+  else {
+    console.log(arrayAlerts.length);
+    arrayAlerts.pop();
+    arrayAlerts.push(comments);
+    drawAlerts();
+  }
+}
+function deleteAlert(index) {
+  arrayAlerts.splice(index, 1);
+  drawAlerts();
 }
 
-function clean(){
+function clean() {
   var name = document.getElementById("nombre").value;
-  var com  = document.getElementById("comentario").value;
+  var com = document.getElementById("comentario").value;
   nombre.innerHTML = "";
   comentario.innerHTML = "";
 }
 
-function contar(){
+function contar() {
   var name = document.getElementById("nombre").value;
-  var com  = document.getElementById("comentario").value;
-  num_name.innerHTML = name.length+'/15';
-  num_com.innerHTML = com.length+'/200';
+  var com = document.getElementById("comentario").value;
+  num_name.innerHTML = name.length + '/15';
+  num_com.innerHTML = com.length + '/200';
 }
