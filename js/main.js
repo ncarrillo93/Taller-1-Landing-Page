@@ -35,7 +35,6 @@ function alerta(comments,alert,index){
     <div class="card py-4 h-100">
         <div class="card-body text-center">
             <div class="d-flex justify-content-between">
-                <div class="name">${index}</div>
                 <div class="name">${comments[0]}</div>
                 <div class="date">${comments[2]}</div>
             </div>
