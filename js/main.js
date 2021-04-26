@@ -1,5 +1,5 @@
 
-const arrayAlerts = ["success"];
+const arrayAlerts = [];
 const alerts = document.getElementById("alerts");
 //let comments = [document.getElementById("nombre").value,document.getElementById("comentario").value,document.getElementById("fecha").value ];
 function drawAlerts(){
@@ -21,6 +21,7 @@ function drawAlerts(){
       alert("debes ingresar un comentario ")
       clean();
     }else{
+      
       alerts.innerHTML = arrayAlerts.map((alert,index)=>alerta(comments,alert,index) ).join('');
       clean();
     }
@@ -34,6 +35,7 @@ function alerta(comments,alert,index){
     <div class="card py-4 h-100">
         <div class="card-body text-center">
             <div class="d-flex justify-content-between">
+                <div class="name">${index}</div>
                 <div class="name">${comments[0]}</div>
                 <div class="date">${comments[2]}</div>
             </div>
@@ -44,9 +46,18 @@ function alerta(comments,alert,index){
 }
 
 
-const addAlerts = (type) => {
-    arrayAlerts.push(type);
-    drawAlerts();
+const addAlerts = (comments) => {
+    if(arrayAlerts.length <=3){
+      console.log("menor a 4");
+      arrayAlerts.push(comments);  
+      drawAlerts();
+    }
+    else{
+      console.log(arrayAlerts.length);
+      arrayAlerts.pop();
+      arrayAlerts.push(comments);
+      drawAlerts();
+    }
 }
 function deleteAlert(index){
     arrayAlerts.splice(index, 1);
